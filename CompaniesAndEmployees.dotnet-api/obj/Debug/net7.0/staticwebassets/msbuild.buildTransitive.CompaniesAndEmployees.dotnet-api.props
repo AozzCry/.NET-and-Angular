@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\CompaniesAndEmployees.dotnet-api.props" />
+</Project>

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "uOVX+aKXWZnnZMCsgTuGQtNRzFVEIUaX4p8ZNxuaWBM=",
+  "Source": "CompaniesAndEmployees.dotnet-api",
+  "BasePath": "_content/CompaniesAndEmployees.dotnet-api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

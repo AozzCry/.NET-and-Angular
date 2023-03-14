@@ -1,0 +1,71 @@
+<form id="employeeForm" #f="ngForm" (ngSubmit)="addSubmit(f)" novalidate>
+  <div class="flx">
+    <mat-form-field class="inputField">
+      <mat-label>First name</mat-label>
+      <input matInput type="text" name="firstName" ngModel required />
+    </mat-form-field>
+    <mat-form-field class="inputField">
+      <mat-label>Last name</mat-label>
+      <input matInput type="text" name="lastName" ngModel required />
+    </mat-form-field>
+    <mat-form-field class="inputField">
+      <mat-label>Email</mat-label>
+      <input matInput type="text" name="email" ngModel required />
+    </mat-form-field>
+    <mat-form-field class="inputField">
+      <mat-label>Phone</mat-label>
+      <input matInput type="text" name="phone" ngModel required />
+    </mat-form-field>
+  </div>
+  <button type="submit" class="subButton" mat-raised-button color="primary">
+    Add new
+  </button>
+</form>
+
+<mat-form-field class="inputField">
+  <mat-label>Search by name</mat-label>
+  <input matInput type="text" name="search" [(ngModel)]="search" />
+</mat-form-field>
+<div class="flx">
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>First name</th>
+      <th>Last name</th>
+    </tr>
+    <ng-container *ngFor="let item of list">
+      <tr
+        *ngIf="
+          search
+            ? item.firstName.toLowerCase().includes(search.toLowerCase()) ||
+              item.lastName.toLowerCase().includes(search.toLowerCase())
+            : true
+        "
+        [ngClass]="{ picked: item === pick }"
+        (click)="pick === item ? (pick = undefined) : (pick = item)"
+      >
+        <td>
+          {{ item.id }}
+        </td>
+        <td>
+          {{ item.firstName }}
+        </td>
+        <td>
+          {{ item.lastName }}
+        </td>
+      </tr></ng-container
+    >
+  </table>
+  <div *ngIf="pick" id="details">
+    <p>Phone number: {{ pick.phone }}</p>
+    <p>Email: {{ pick.email }}</p>
+    <button
+      style="width: 100%; background-color: lightcoral"
+      mat-raised-button
+      color="primary"
+      (click)="deleteSubmit(pick.id)"
+    >
+      Delete
+    </button>
+  </div>
+</div>

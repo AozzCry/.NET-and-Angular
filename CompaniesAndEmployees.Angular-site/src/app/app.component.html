@@ -1,0 +1,37 @@
+<nav>
+  <mat-toolbar color="secondary">
+    <mat-toolbar-row>
+      <span id="page-name">Companies and Employees</span>
+      <span class="spacer"></span>
+      <button
+        mat-raised-button
+        color="primary"
+        routerLink="/company"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+      >
+        Companies
+      </button>
+      <button
+        mat-raised-button
+        color="primary"
+        routerLink="/employee"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+      >
+        Employees
+      </button>
+      <button
+        mat-raised-button
+        color="primary"
+        routerLink="/account"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+      >
+        Log in
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</nav>
+<router-outlet></router-outlet>
+<footer>Page created by Emil Knysak</footer>

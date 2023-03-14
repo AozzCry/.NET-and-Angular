@@ -1,0 +1,38 @@
+#employeeForm {
+  margin: 5px;
+}
+.inputField {
+  margin: 0 3px;
+  flex-grow: 1;
+  margin-bottom: -0.95em;
+}
+.subButton {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+td,
+th {
+  border: solid 1px;
+  padding: 8px;
+  background-color: lightgray;
+  color: black;
+}
+.picked > td {
+  background-color: grey !important;
+}
+
+tr:hover > td {
+  background-color: grey;
+  cursor: pointer;
+}
+
+.flx {
+  display: flex;
+  flex-direction: row;
+}
+
+#details {
+  background-color: grey;
+  padding: 10px;
+}
